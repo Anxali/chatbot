@@ -22,4 +22,10 @@ const userSchema = new mongooese.Schema({
         type: String,
         required: true
     }
-});
+}, {timestamps: true}
+
+);
+
+const userModel = mongooese.model('User', userSchema);
+
+module.exports = userModel;
